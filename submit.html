@@ -1,0 +1,46 @@
+---
+layout: default
+---
+
+<form method="POST" data-netlify="true">
+    <h2>Submit A Recipe</h2>
+
+    <label for="title">Title</label>
+    <input type="text" id="title" name="recipe_table" , placeholder="My Awesome Recipe">
+
+    <label for="description">Description</label>
+    <textarea id="description" name="recipe_description" ,
+        placeholder="Short description of recipe or why you love it."></textarea>
+
+    <label for="image">Image</label>
+    <input type="file" id="image" name="recipe_image">
+
+    <!-- Credit for the image if you don't own it -->
+    <label for="title">Image Credit</label>
+    <input type="text" id="credit" name="image_credit" , placeholder="Where you got it if it isn't yours">
+
+    <label for="title">Cook Time</label>
+    <input type="text" id="cooktime" name="cook_time" , placeholder="1 Hour">
+
+    <label for="title">Active Time</label>
+    <input type="text" id="activetime" name="active_time" , placeholder="1 Hour">
+
+    <label for="title">Yield</label>
+    <input type="text" id="yield" name="recipe_yield" , placeholder="4 Servings">
+
+    <label for="ingredients">Ingredients</label>
+    <textarea id="ingredients" name="recipe_ingredients" ,
+        placeholder="2 cups diced onion
+1 cup diced carrots
+1 cup diced celery
+1 Tbsp oil"></textarea>
+
+    <label for="directions">Directions</label>
+    <textarea id="directions" name="recipe_directions" ,
+        placeholder="Preheat pan over medium heat
+Add oil and give it a moment to heat
+Add vegetables and saute
+Etc..."></textarea>
+
+    <button type="submit">Submit</button>
+</form>

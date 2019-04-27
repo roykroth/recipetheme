@@ -1,0 +1,25 @@
+---
+---
+[
+  {% for post in site.recipes %}
+    {
+	  "title"    : "{{ post.title | escape }}",
+    {% if post.ingredients %}
+      "ingredients":[
+        {% for ingredient in post.ingredients %}
+        {% if ingredient.first %}
+          {{ingredient.first[0] | jsonify}},
+            {% for i in ingredient.first[1] %}
+              {{i | jsonify}}{% unless forloop.last %},{% endunless %}
+            {% endfor %}
+        {% else %}
+          {{ ingredient | jsonify}} 
+        {% endif %}
+        {% unless forloop.last %},{% endunless %}
+        {% endfor %}],
+    {% endif %}
+		"image" : "{{ post.image }}",
+	    "url" : "{{ site.baseurl }}{{ post.url }}"
+    } {% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]

@@ -1,0 +1,22 @@
+# Site settings
+title: Roth Recipes
+email: your-email@domain.com
+description: The plain text recipe database for hackers
+baseurl: ""
+github_username:  roykroth
+
+# Build settings
+markdown: kramdown
+
+permalink: /:title:output_ext
+
+collections:
+  components:
+    output: true
+  recipes:
+    output: true
+
+plugins:
+  - jemoji
+
+exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'README.md']
